@@ -1,0 +1,138 @@
+<!Doctype html>
+
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Google Glass</title>
+    <link rel="stylesheet" type="text/css" href="_css/estilo.css">
+    <link rel="stylesheet" type="text/css" href="_css/form.css">
+    <script src="_javascript/funcoes.js"></script>
+    <script>
+        function calc_total(){
+            var qtd = parseInt(document.getElementById(cqtd).value)
+            total = qtd * 1500;
+            document.getElementById(ctot).value = tot;
+        }
+    </script>
+</head>
+
+<body>
+    <div id="inicial">
+
+
+        <header id="cabecalho">
+            <h1>Google Glass</h1>
+            <h2>A revolução do Google está chegando</h2>
+
+
+
+            <img id="icone" src="_imagens/glass-oculos-preto-med.png">
+            <nav id="menu">
+                <h1>Menu Principal</h1>
+                <ul>
+                    <li onmouseover="mudaFoto('_imagens/home.png')" onmouseout="mudaFoto('_imagens/contato.png')">
+                        <a href="index.html"> Home</a>
+                    </li>
+                    <li onmouseover="mudaFoto('_imagens/especificacoes.png')" onmouseout="mudaFoto('_imagens/contato.png')">
+                        <a href="specs.html"> Especificações</a>
+                    </li>
+                    <li onmouseover="mudaFoto('_imagens/fotos.png')" onmouseout="mudaFoto('_imagens/contato.png')">
+                        <a href="fotos.html">Fotos</a>
+                    </li>
+                    <li onmouseover="mudaFoto('_imagens/multimidia.png')" onmouseout="mudaFoto('_imagens/contato.png')">
+                        <a href="multimidia.html"> Multimídia</a>
+                    </li>
+                    <li onmouseover="mudaFoto('_imagens/contato.png')" onmouseout="mudaFoto('_imagens/contato.png')">
+                        <a href="fale-conosco.html">Fale conosco</a>
+                    </li>
+                </ul>
+            </nav>
+
+
+        </header>
+        <section id="corpo-full">
+            <article id="noticia-principal">
+                <header id="cabecalho-artigo">
+                    <hgroup>
+                        <h3>Fale Conosco > Contato</h3>
+                        <h1>Formulário de Contato</h1>
+                        <h2>por Gabriel Takahashi</h2>
+                        <h3 class="direita">Atualizado em 01/Dezembro/2017</h3>
+                    </hgroup>
+                </header>
+
+
+
+
+<form method="post" id="fcontato" action="mailto:Gabriel.takahashii5@outlook.com.br" oninput="calc_total();">
+<fieldset id="usuario"><legend>Informação do Usuário</legend> 
+    <p><label for="cnome">Nome:</label><input type="text" name="tnome" id="cnome" size="20" maxlength="30" placeholder="Digite seu Nome."></p>
+    <p> <label for="csenha">Senha:</label><input type="password" name"tsenha" id="csenha" size="20" maxlength="8" placeholder="Digite sua senha."></p>
+    <p> <label for="cemail">E-mail:</label><input type="email" name="temail" id="cemail" size="40" maxlength="40" placeholder="Digite o seu E-mail."></p>
+    <fieldset id="sexo"><legend>Sexo</legend>
+        <input type="radio" name="tsexo" id="cmasc" > <label for="cmasc">Masculino</label><br>
+        <input type="radio" name="tsexo" id="cfem"> <label for="cfem">Feminino</label>
+        
+</fieldset>
+    <p>Data de Nascimento:<input type="date" name=tdate id="cdate"></p>
+</fieldset>
+<fieldset id="endereco"><legend>Endereço do Usuário</legend>
+    <p><label for="crua">Logradouro:</label><input type="text" name="trua" id="crua" size="20" maxlength="40" placeholder="Digite sua lozalização."></p>
+    <p>Número:<input type="number" name="tnum" id="cnum" size="5" maxlength="5"></p>
+    <p><label for="cest">Estado:</label>
+    <select name="test" id="cest">
+        <optgroup label="Sudeste">
+        <option>Rio de Janeiro</option>
+        <option>São Paulo</option></p>
+    </optgroup>
+    <optgroup label="Sul">
+        <option>Paraná</option>
+        <option>Rio Grande do Sul</option>
+    </optgroup>
+    </select>
+
+    <p><label for="ccid">Cidade:</label>
+        <input type="text" name="tcid " id="ccid" maxlength="40" size="20" placeholder="Sua cidade.">
+        </p>
+
+</fieldset>
+
+<fieldset id="mensagem"><legend>Mensagem do Usuário</legend>
+    <p><label for="cmsg">Mensagem:</label>
+    <textarea name="tmsg"  id="cmsg" cols="48" rows="5">
+
+    </textarea></p>
+    
+    
+    </p>
+</fieldset>
+
+
+<fieldset id="pedido"><legend>Quero um Google Glass</legend>
+    <p><input type="checkbox" name="tped" id="cped">
+        <label for="cped">Gostaria de adquirir um Google Glass quando disponível</label></p>
+    <p><label for="ccor">Cor:</label>
+        <input type="color" name="tcor" id="ccor">
+    </p>
+    <p><label for="cqtd">Quantidade:</label>
+    <input type="number" name="tqtd" id="cqtd" min="0" max="5" value="0"> 
+    </p>
+    <input type="text" name="ttot" id="ctot" size="20" maxlength="30" placeholder="Total a pagar." readonly>    </p>
+</fieldset>
+
+<input type="image" src="_imagens/botao-enviar.png">
+</form>
+</article>
+</section>
+<footer id="rodape">
+        <p>Copyright 2017 - by Gabriel Takahashi
+            <br>
+            <a href="https://www.facebook.com/" target="_blank">Facebook</a> |
+            <a href="https://twitter.com/login?lang=pt" target="_blank">Twitter</a>
+        </p>
+    </footer>
+    </div>
+    </body>
+    </html>
